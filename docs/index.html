@@ -6,20 +6,33 @@
     <title>Explainability in Practice: A Survey of Explainable NLP</title>
     <meta name="description" content="Comprehensive survey of Explainable Natural Language Processing (XNLP) across medicine, finance, CRM, HR, and more.">
     <meta name="keywords" content="XNLP, Explainable AI, NLP, Survey, Machine Learning, Interpretability">
+    <meta name="author" content="Hadi Mohammadi">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
-    <!-- Chart.js for visualizations -->
+
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">XNLP Survey</a>
             <ul class="nav-links">
                 <li><a href="#abstract">Abstract</a></li>
                 <li><a href="#statistics">Statistics</a></li>
                 <li><a href="#taxonomy">Taxonomy</a></li>
+                <li><a href="#findings">Findings</a></li>
                 <li><a href="#domains">Domains</a></li>
                 <li><a href="#resources">Resources</a></li>
                 <li><a href="#citation">Citation</a></li>
@@ -29,36 +42,40 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1>Explainability in Practice: A Survey of Explainable NLP Across Various Domains</h1>
-        <p class="subtitle">A Comprehensive Analysis of XNLP Techniques, Applications, and Evaluation Methods</p>
-        <p class="journal">Journal of Information Science | SAGE Publications | 2025</p>
-        <div class="hero-buttons">
-            <a href="../paper/XNLP_Survey.pdf" class="btn btn-primary">
-                <span>📄</span> Read Paper
-            </a>
-            <a href="https://github.com/mohammadi-hadi/xnlp-survey" class="btn btn-secondary">
-                <span>💻</span> View on GitHub
-            </a>
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Explainability in Practice: A Survey of Explainable NLP Across Various Domains</h1>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">A Comprehensive Analysis of XNLP Techniques, Applications, and Evaluation Methods</p>
+            <p class="journal" data-aos="fade-up" data-aos-delay="150">Journal of Information Science | SAGE Publications | 2025</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="../paper/XNLP_Survey.pdf" class="btn btn-primary">
+                    <span>📄</span> Read Paper
+                </a>
+                <a href="https://github.com/mohammadi-hadi/xnlp-survey" class="btn btn-secondary">
+                    <span>💻</span> View on GitHub
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Abstract Section -->
     <section id="abstract" class="section">
-        <h2>Abstract</h2>
-        <div class="abstract-content">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Abstract</h2>
+        </div>
+        <div class="abstract-content" data-aos="fade-up" data-aos-delay="100">
             <p>
                 As Natural Language Processing (NLP) models grow increasingly complex and are deployed in high-stakes domains,
                 the demand for transparency and interpretability has intensified. This survey provides a comprehensive analysis
                 of <strong>Explainable NLP (XNLP)</strong> across diverse application domains, examining how different fields
                 conceptualize, implement, and evaluate explanations.
             </p>
-            <p style="margin-top: 1rem;">
+            <p>
                 We analyze XNLP applications in <strong>medicine, finance, customer relationship management, human resources,
                 systematic reviews, social and behavioral science, and conversational AI</strong>. Our cross-domain analysis
                 reveals both common patterns—such as the universal need for building user trust—and critical differences in
                 explainability requirements shaped by regulatory constraints, stakeholder expertise, and risk tolerance.
             </p>
-            <p style="margin-top: 1rem;">
+            <p>
                 The survey covers explanation techniques from traditional machine learning to large language models, including
                 emerging approaches in <strong>mechanistic interpretability</strong> and <strong>chain-of-thought reasoning</strong>.
                 We propose a framework for domain-adaptive explainability evaluation and identify key challenges and future
@@ -68,39 +85,45 @@
     </section>
 
     <!-- Statistics Section -->
-    <section id="statistics" class="section section-alt">
-        <h2>Survey at a Glance</h2>
-        <p class="section-subtitle">Key statistics from our comprehensive literature review</p>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon">📚</div>
-                <div class="stat-number" data-target="200">0</div>
-                <div class="stat-label">Papers Reviewed</div>
+    <div class="section-alt">
+        <section id="statistics" class="section">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Survey at a Glance</h2>
+                <p class="section-subtitle">Key statistics from our comprehensive literature review</p>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">🏥</div>
-                <div class="stat-number" data-target="7">0</div>
-                <div class="stat-label">Application Domains</div>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-label">Papers Reviewed</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">🏥</div>
+                    <div class="stat-number" data-target="7">0</div>
+                    <div class="stat-label">Application Domains</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">🔧</div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">XAI Methods Analyzed</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Evaluation Metrics</div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">🔧</div>
-                <div class="stat-number" data-target="15">0</div>
-                <div class="stat-label">XAI Methods Analyzed</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">📊</div>
-                <div class="stat-number" data-target="12">0</div>
-                <div class="stat-label">Evaluation Metrics</div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Taxonomy Visualization -->
+    <!-- Taxonomy Section -->
     <section id="taxonomy" class="section">
-        <h2>XNLP Taxonomy</h2>
-        <p class="section-subtitle">Hierarchical classification of explainability techniques in NLP</p>
+        <div class="section-header" data-aos="fade-up">
+            <h2>XNLP Taxonomy</h2>
+            <p class="section-subtitle">Hierarchical classification of explainability techniques in NLP</p>
+        </div>
 
-        <div class="taxonomy-container">
+        <div class="taxonomy-container" data-aos="fade-up" data-aos-delay="100">
             <div class="taxonomy-tree">
                 <!-- Root -->
                 <div class="taxonomy-level taxonomy-root">
@@ -142,39 +165,45 @@
     </section>
 
     <!-- Charts Section -->
-    <section id="charts" class="section section-alt">
-        <h2>Visual Analysis</h2>
-        <p class="section-subtitle">Interactive visualizations of our survey findings</p>
-
-        <div class="charts-grid">
-            <!-- Domain Distribution Chart -->
-            <div class="chart-container">
-                <h3>Papers by Application Domain</h3>
-                <canvas id="domainChart"></canvas>
+    <div class="section-alt">
+        <section id="charts" class="section">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Visual Analysis</h2>
+                <p class="section-subtitle">Interactive visualizations of our survey findings</p>
             </div>
 
-            <!-- Methods Popularity Chart -->
-            <div class="chart-container">
-                <h3>Most Used XAI Methods</h3>
-                <canvas id="methodsChart"></canvas>
-            </div>
-        </div>
+            <div class="charts-grid">
+                <!-- Domain Distribution Chart -->
+                <div class="chart-container" data-aos="fade-up" data-aos-delay="0">
+                    <h3>Papers by Application Domain</h3>
+                    <canvas id="domainChart"></canvas>
+                </div>
 
-        <!-- Domain Requirements Radar -->
-        <div class="chart-container-wide">
-            <h3>Domain Requirements Comparison</h3>
-            <canvas id="radarChart"></canvas>
-        </div>
-    </section>
+                <!-- Methods Popularity Chart -->
+                <div class="chart-container" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Most Used XAI Methods</h3>
+                    <canvas id="methodsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Domain Requirements Radar -->
+            <div class="chart-container-wide" data-aos="fade-up" data-aos-delay="200">
+                <h3>Domain Requirements Comparison</h3>
+                <canvas id="radarChart"></canvas>
+            </div>
+        </section>
+    </div>
 
     <!-- Key Findings Section -->
     <section id="findings" class="section">
-        <h2>Key Findings</h2>
-        <p class="section-subtitle">
-            Our cross-domain analysis reveals critical insights for researchers and practitioners deploying XNLP systems.
-        </p>
+        <div class="section-header" data-aos="fade-up">
+            <h2>Key Findings</h2>
+            <p class="section-subtitle">
+                Our cross-domain analysis reveals critical insights for researchers and practitioners deploying XNLP systems.
+            </p>
+        </div>
         <div class="findings-grid">
-            <div class="finding-card">
+            <div class="finding-card" data-aos="fade-up" data-aos-delay="0">
                 <h3>🎯 Domain-Specific Requirements</h3>
                 <p>
                     Explainability is not one-size-fits-all. Medical applications prioritize clinical validity and patient safety,
@@ -182,7 +211,7 @@
                     tailored explanation strategies.
                 </p>
             </div>
-            <div class="finding-card">
+            <div class="finding-card" data-aos="fade-up" data-aos-delay="100">
                 <h3>📊 Evaluation Gap</h3>
                 <p>
                     A significant disconnect exists between technical metrics (fidelity, faithfulness) and practical utility.
@@ -190,7 +219,7 @@
                     the need for domain-specific validation protocols.
                 </p>
             </div>
-            <div class="finding-card">
+            <div class="finding-card" data-aos="fade-up" data-aos-delay="200">
                 <h3>🤖 LLM Challenges</h3>
                 <p>
                     Large language models present unique interpretability challenges. Chain-of-thought explanations may not
@@ -198,7 +227,7 @@
                     promise but remains incomplete.
                 </p>
             </div>
-            <div class="finding-card">
+            <div class="finding-card" data-aos="fade-up" data-aos-delay="300">
                 <h3>📈 Measurable Impact</h3>
                 <p>
                     Empirical evidence demonstrates explainability's tangible benefits: RETAIN achieves 0.87 AUC in heart failure
@@ -210,77 +239,83 @@
     </section>
 
     <!-- Domains Section -->
-    <section id="domains" class="section section-alt">
-        <h2>Application Domains</h2>
-        <p class="section-subtitle">
-            Comparison of XNLP requirements, methods, and challenges across seven major application domains.
-        </p>
-        <div style="overflow-x: auto;">
-            <table class="domains-table">
-                <thead>
-                    <tr>
-                        <th>Domain</th>
-                        <th>Primary Need</th>
-                        <th>Key Methods</th>
-                        <th>Unique Challenges</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="domain-tag">Medicine</span></td>
-                        <td>Clinical actionability; patient safety</td>
-                        <td>RETAIN, SHAP, LIME, attention visualization</td>
-                        <td>HIPAA/GDPR constraints; clinical workflow integration</td>
-                    </tr>
-                    <tr>
-                        <td><span class="domain-tag">Finance</span></td>
-                        <td>Regulatory compliance; fraud detection</td>
-                        <td>SHAP, LIME, attention heatmaps</td>
-                        <td>Adversarial gaming; real-time constraints</td>
-                    </tr>
-                    <tr>
-                        <td><span class="domain-tag">CRM</span></td>
-                        <td>User satisfaction; personalization</td>
-                        <td>Attention visualization, rationale generation</td>
-                        <td>Multi-language requirements; privacy concerns</td>
-                    </tr>
-                    <tr>
-                        <td><span class="domain-tag">HR</span></td>
-                        <td>Fair hiring; bias reduction</td>
-                        <td>Counterfactual explanations, feature importance</td>
-                        <td>Legal liability; cross-cultural validity</td>
-                    </tr>
-                    <tr>
-                        <td><span class="domain-tag">Social Science</span></td>
-                        <td>Content moderation; safety</td>
-                        <td>SHAP, LIME, attention-based methods</td>
-                        <td>Cultural sensitivity; annotation bias</td>
-                    </tr>
-                    <tr>
-                        <td><span class="domain-tag">Systematic Reviews</span></td>
-                        <td>Reproducibility; efficiency</td>
-                        <td>Rule-based extraction, active learning</td>
-                        <td>Heterogeneous corpora; tool integration</td>
-                    </tr>
-                    <tr>
-                        <td><span class="domain-tag">Chatbots</span></td>
-                        <td>User trust; understanding</td>
-                        <td>Dialogue explanations, attention visualization</td>
-                        <td>Real-time generation; conversational flow</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    <div class="section-alt">
+        <section id="domains" class="section">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Application Domains</h2>
+                <p class="section-subtitle">
+                    Comparison of XNLP requirements, methods, and challenges across seven major application domains.
+                </p>
+            </div>
+            <div class="table-container" data-aos="fade-up" data-aos-delay="100">
+                <table class="domains-table">
+                    <thead>
+                        <tr>
+                            <th>Domain</th>
+                            <th>Primary Need</th>
+                            <th>Key Methods</th>
+                            <th>Unique Challenges</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="domain-tag">Medicine</span></td>
+                            <td>Clinical actionability; patient safety</td>
+                            <td>RETAIN, SHAP, LIME, attention visualization</td>
+                            <td>HIPAA/GDPR constraints; clinical workflow integration</td>
+                        </tr>
+                        <tr>
+                            <td><span class="domain-tag">Finance</span></td>
+                            <td>Regulatory compliance; fraud detection</td>
+                            <td>SHAP, LIME, attention heatmaps</td>
+                            <td>Adversarial gaming; real-time constraints</td>
+                        </tr>
+                        <tr>
+                            <td><span class="domain-tag">CRM</span></td>
+                            <td>User satisfaction; personalization</td>
+                            <td>Attention visualization, rationale generation</td>
+                            <td>Multi-language requirements; privacy concerns</td>
+                        </tr>
+                        <tr>
+                            <td><span class="domain-tag">HR</span></td>
+                            <td>Fair hiring; bias reduction</td>
+                            <td>Counterfactual explanations, feature importance</td>
+                            <td>Legal liability; cross-cultural validity</td>
+                        </tr>
+                        <tr>
+                            <td><span class="domain-tag">Social Science</span></td>
+                            <td>Content moderation; safety</td>
+                            <td>SHAP, LIME, attention-based methods</td>
+                            <td>Cultural sensitivity; annotation bias</td>
+                        </tr>
+                        <tr>
+                            <td><span class="domain-tag">Systematic Reviews</span></td>
+                            <td>Reproducibility; efficiency</td>
+                            <td>Rule-based extraction, active learning</td>
+                            <td>Heterogeneous corpora; tool integration</td>
+                        </tr>
+                        <tr>
+                            <td><span class="domain-tag">Chatbots</span></td>
+                            <td>User trust; understanding</td>
+                            <td>Dialogue explanations, attention visualization</td>
+                            <td>Real-time generation; conversational flow</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
 
     <!-- Resources Section -->
     <section id="resources" class="section">
-        <h2>Resources</h2>
-        <p class="section-subtitle">
-            Curated collection of tools, datasets, and supplementary materials from our survey.
-        </p>
+        <div class="section-header" data-aos="fade-up">
+            <h2>Resources</h2>
+            <p class="section-subtitle">
+                Curated collection of tools, datasets, and supplementary materials from our survey.
+            </p>
+        </div>
         <div class="resources-grid">
-            <div class="resource-card">
+            <div class="resource-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="resource-icon">📊</div>
                 <div class="resource-content">
                     <h4>Structured Data</h4>
@@ -288,7 +323,7 @@
                     <a href="https://github.com/mohammadi-hadi/xnlp-survey/tree/main/data/tables" class="resource-link">View Data →</a>
                 </div>
             </div>
-            <div class="resource-card">
+            <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="resource-icon">🗂️</div>
                 <div class="resource-content">
                     <h4>XNLP Taxonomy</h4>
@@ -296,7 +331,7 @@
                     <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/data/taxonomy/xnlp_taxonomy.json" class="resource-link">View Taxonomy →</a>
                 </div>
             </div>
-            <div class="resource-card">
+            <div class="resource-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="resource-icon">📚</div>
                 <div class="resource-content">
                     <h4>Bibliography</h4>
@@ -304,7 +339,7 @@
                     <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/paper/bibtex/references.bib" class="resource-link">Download BibTeX →</a>
                 </div>
             </div>
-            <div class="resource-card">
+            <div class="resource-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="resource-icon">🔧</div>
                 <div class="resource-content">
                     <h4>Tools & Datasets</h4>
@@ -316,14 +351,17 @@
     </section>
 
     <!-- Citation Section -->
-    <section id="citation" class="section section-alt">
-        <h2>Citation</h2>
-        <p class="section-subtitle">
-            If you find this survey useful in your research, please cite our work.
-        </p>
-        <div class="citation-box">
-            <button class="copy-btn" onclick="copyBibtex()">Copy</button>
-            <pre id="bibtex">@article{xnlp_survey_2025,
+    <div class="section-alt">
+        <section id="citation" class="section">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Citation</h2>
+                <p class="section-subtitle">
+                    If you find this survey useful in your research, please cite our work.
+                </p>
+            </div>
+            <div class="citation-box" data-aos="fade-up" data-aos-delay="100">
+                <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+                <pre id="bibtex">@article{xnlp_survey_2025,
   title={Explainability in Practice: A Survey of Explainable {NLP}
          Across Various Domains},
   author={[Authors]},
@@ -331,11 +369,12 @@
   year={2025},
   publisher={SAGE Publications}
 }</pre>
-        </div>
-        <p class="text-center mt-2" style="color: var(--text-light);">
-            See <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/CITATION.cff">CITATION.cff</a> for machine-readable metadata.
-        </p>
-    </section>
+            </div>
+            <p class="text-center mt-2" style="color: var(--text-secondary);">
+                See <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/CITATION.cff" style="color: var(--primary);">CITATION.cff</a> for machine-readable metadata.
+            </p>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -349,7 +388,26 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/charts.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 50,
+            once: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
