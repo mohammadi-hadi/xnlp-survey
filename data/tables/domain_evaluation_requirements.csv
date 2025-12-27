@@ -1,0 +1,6 @@
+Domain,Primary Metrics,Validation Method,Key Challenges,Stakeholders
+Medicine,"Clinical validity, fidelity, actionability","Expert clinician review; clinical trial validation","Regulatory approval (FDA/EMA); integration with clinical workflows; liability concerns","Clinicians, patients, regulators"
+Finance,"Fidelity, compliance score, robustness","Regulatory audit; stress testing; adversarial evaluation","Adversarial robustness; temporal stability; real-time requirements","Analysts, auditors, regulators"
+Social Science,"Fairness, faithfulness, cultural validity","Crowdsource annotation; expert review; cross-cultural validation","Annotation bias; cultural variation in interpretation; platform specificity","Researchers, moderators, users"
+HR,"Fairness metrics, disparate impact, legal compliance","Legal review; bias audits; demographic parity testing","Legal liability; protected attribute handling; cross-jurisdictional requirements","HR professionals, legal counsel, candidates"
+CRM,"User satisfaction, trust, engagement","A/B testing; user surveys; behavioral metrics","Real-time generation; personalization trade-offs; multilingual support","Customer service agents, end users"

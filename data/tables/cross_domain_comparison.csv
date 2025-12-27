@@ -1,0 +1,8 @@
+Domain,Primary XAI Need,Preferred Methods,Key Metrics,Unique Challenges
+Medicine,"Clinical actionability; patient safety","Feature importance, rule extraction, attention visualization","AUC, clinical validity, user trust","HIPAA/GDPR privacy constraints; concept drift in EHR data; class imbalance; integration with clinical workflows"
+Finance,"Regulatory compliance; fraud detection","SHAP, LIME, attention heatmaps, ensemble methods","AUC-ROC, accuracy, compliance score","Adversarial gaming of explanations; real-time scalability; temporal dynamics in markets"
+CRM,"User satisfaction; personalization","Attention visualization, rationale generation, dialogue explanations","Accuracy, F1-score, satisfaction scores","Personalization vs. transparency trade-off; multi-language requirements; real-time response needs"
+HR,"Fair hiring; bias reduction","Feature importance, counterfactual explanations","Match accuracy, bias metrics, fairness scores","Legal liability for biased decisions; sensitive personal data; cross-cultural validity of criteria"
+Social Science,"Content moderation; safety","SHAP, LIME, attention-based methods","Accuracy, F1-score, fairness metrics","Cultural sensitivity in hate speech detection; annotation bias; platform-specific language"
+Systematic Reviews,"Reproducibility; efficiency","Rule-based extraction, feature highlighting","WSS, inter-rater agreement (κ), recall","Scalability across heterogeneous corpora; integration with existing review tools"
+Chatbots,"User understanding; trust building","Dialogue-level explanations, attention visualization","User trust, satisfaction, task completion rate","Balancing explanation detail with conversational flow; real-time generation"

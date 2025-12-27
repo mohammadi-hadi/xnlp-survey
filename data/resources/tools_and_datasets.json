@@ -1,0 +1,106 @@
+{
+  "explanation_tools": {
+    "LIME": {
+      "name": "Local Interpretable Model-agnostic Explanations",
+      "url": "https://github.com/marcotcr/lime",
+      "description": "Explains predictions of any classifier by learning interpretable local models"
+    },
+    "SHAP": {
+      "name": "SHapley Additive exPlanations",
+      "url": "https://github.com/slundberg/shap",
+      "description": "Game-theoretic approach to explain individual predictions"
+    },
+    "Captum": {
+      "name": "Captum",
+      "url": "https://captum.ai/",
+      "description": "PyTorch library for model interpretability"
+    },
+    "InterpretML": {
+      "name": "InterpretML",
+      "url": "https://interpret.ml/",
+      "description": "Microsoft's unified framework for machine learning interpretability"
+    },
+    "TransformerLens": {
+      "name": "TransformerLens",
+      "url": "https://github.com/neelnanda-io/TransformerLens",
+      "description": "Library for mechanistic interpretability of transformers"
+    },
+    "BertViz": {
+      "name": "BertViz",
+      "url": "https://github.com/jessevig/bertviz",
+      "description": "Visualization tool for attention in transformer models"
+    },
+    "Ecco": {
+      "name": "Ecco",
+      "url": "https://github.com/jalammar/ecco",
+      "description": "Library for exploring and explaining NLP language models"
+    }
+  },
+
+  "systematic_review_tools": {
+    "ASReview": {
+      "name": "ASReview",
+      "url": "https://asreview.nl/",
+      "description": "Active learning for systematic reviews"
+    },
+    "RobotReviewer": {
+      "name": "RobotReviewer",
+      "url": "https://www.robotreviewer.net/",
+      "description": "AI system for evidence-based medicine"
+    }
+  },
+
+  "benchmarks_and_datasets": {
+    "HateXplain": {
+      "name": "HateXplain",
+      "url": "https://github.com/hate-alert/HateXplain",
+      "description": "Benchmark dataset for explainable hate speech detection"
+    },
+    "ERASER": {
+      "name": "ERASER Benchmark",
+      "url": "https://www.eraserbenchmark.com/",
+      "description": "Evaluating Rationales And Simple English Reasoning"
+    },
+    "e-SNLI": {
+      "name": "e-SNLI",
+      "url": "https://github.com/OanaMariaCambworkor/e-SNLI",
+      "description": "Natural language inference with human explanations"
+    },
+    "MIMIC-III": {
+      "name": "MIMIC-III",
+      "url": "https://mimic.mit.edu/",
+      "description": "Medical Information Mart for Intensive Care (requires credentialing)"
+    }
+  },
+
+  "model_hubs": {
+    "HuggingFace": {
+      "name": "Hugging Face Model Hub",
+      "url": "https://huggingface.co/models",
+      "description": "Repository of pre-trained NLP models"
+    },
+    "TensorFlowHub": {
+      "name": "TensorFlow Hub",
+      "url": "https://tfhub.dev/",
+      "description": "Repository of trained machine learning models"
+    }
+  },
+
+  "frameworks": {
+    "Transformers": {
+      "name": "Hugging Face Transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "State-of-the-art NLP library"
+    },
+    "spaCy": {
+      "name": "spaCy",
+      "url": "https://spacy.io/",
+      "description": "Industrial-strength NLP library"
+    },
+    "AllenNLP": {
+      "name": "AllenNLP",
+      "url": "https://allennlp.org/",
+      "description": "Open-source NLP research library"
+    }
+  }
+}
