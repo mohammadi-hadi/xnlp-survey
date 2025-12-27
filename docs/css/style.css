@@ -413,3 +413,223 @@ body {
 .mb-2 {
   margin-bottom: 2rem;
 }
+
+/* Statistics Section */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Taxonomy Visualization */
+.taxonomy-container {
+  overflow-x: auto;
+  padding: 2rem 0;
+}
+
+.taxonomy-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-width: 800px;
+}
+
+.taxonomy-level {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.taxonomy-root {
+  margin-bottom: 1rem;
+}
+
+.taxonomy-node {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.taxonomy-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.root-node {
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+}
+
+.cat-node {
+  color: white;
+  font-size: 1rem;
+}
+
+.cat-node.post-hoc {
+  background: #e53e3e;
+}
+
+.cat-node.intrinsic {
+  background: #38a169;
+}
+
+.cat-node.llm-methods {
+  background: #805ad5;
+}
+
+.taxonomy-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.taxonomy-children {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.leaf-node {
+  background: var(--bg-dark);
+  color: var(--text-color);
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Connecting lines */
+.taxonomy-branch::before {
+  content: '';
+  width: 2px;
+  height: 20px;
+  background: var(--border-color);
+}
+
+.taxonomy-root::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: var(--border-color);
+  margin: 1.5rem auto 0;
+}
+
+/* Charts Section */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.chart-container h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.chart-container canvas {
+  max-height: 300px;
+}
+
+.chart-container-wide {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.chart-container-wide h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.chart-container-wide canvas {
+  max-height: 400px;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .taxonomy-tree {
+    min-width: 600px;
+  }
+
+  .taxonomy-level {
+    gap: 1rem;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container,
+  .chart-container-wide {
+    padding: 1.5rem;
+  }
+}
