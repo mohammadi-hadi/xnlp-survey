@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this survey or its resources, please cite it as below."
+title: "Explainability in Practice: A Survey of Explainable NLP Across Various Domains"
+type: article
+authors:
+  - name: "[Author Names]"
+    affiliation: "[Institution]"
+journal: "Journal of Information Science"
+year: 2025
+publisher:
+  name: "SAGE Publications"
+keywords:
+  - explainable AI
+  - natural language processing
+  - XAI
+  - XNLP
+  - interpretability
+  - machine learning
+  - survey
+abstract: >-
+  This survey provides a comprehensive analysis of Explainable Natural Language
+  Processing (XNLP) across diverse application domains including medicine, finance,
+  customer relationship management, human resources, systematic reviews, social science,
+  and conversational AI. We examine how different fields conceptualize, implement,
+  and evaluate explanations, identifying both common patterns and domain-specific
+  requirements. The survey covers explanation techniques from traditional machine
+  learning to large language models, and proposes a framework for domain-adaptive
+  explainability evaluation.
+license: CC-BY-4.0
+repository-code: "https://github.com/[username]/xnlp-survey"

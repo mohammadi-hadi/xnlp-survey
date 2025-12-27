@@ -1,0 +1,11 @@
+Metric Category,Metric Name,Description,Common Use Cases
+Quantitative,Fidelity,"Measures how accurately an explanation captures the model's genuine behavior","LIME local approximations, surrogate model evaluation"
+Quantitative,Faithfulness,"Measures whether an explanation truly reflects the model's internal reasoning process","Attention analysis, feature attribution validation"
+Quantitative,Coherence,"Assesses logical consistency and human-readability of explanations","BLEU, ROUGE, BERTScore for explanation quality"
+Quantitative,Comprehensiveness,"Measures if removing highlighted features significantly changes predictions","Feature importance validation"
+Quantitative,Sufficiency,"Tests if highlighted features alone can produce the same prediction","Minimal sufficient explanation identification"
+Human-Centered,Understandability,"User studies measuring how well humans comprehend explanations","User interface evaluation, clinical decision support"
+Human-Centered,Trust Calibration,"Whether explanations help users appropriately trust/distrust model predictions","High-stakes applications (medicine, finance)"
+Human-Centered,Task Performance,"Impact of explanations on user decision-making accuracy","A/B testing, controlled experiments"
+Benchmark,M4,"Unified benchmark for faithfulness across text, image, and multimodal domains","Cross-modality evaluation"
+Benchmark,ERASER,"Rationale-based explanation benchmark for text classification","NLP explanation method comparison"

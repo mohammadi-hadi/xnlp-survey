@@ -1,0 +1,149 @@
+{
+  "title": "Taxonomy of Explainable Natural Language Processing (XNLP)",
+  "version": "1.0",
+  "description": "Hierarchical classification of XNLP techniques, applications, and evaluation methods",
+
+  "modeling_techniques": {
+    "traditional_nlp": {
+      "description": "Classical machine learning approaches with inherent interpretability",
+      "methods": [
+        "Bag-of-Words with Logistic Regression",
+        "TF-IDF with Decision Trees",
+        "Rule-based Systems",
+        "N-gram Models"
+      ],
+      "explainability": "Inherently interpretable through feature weights and rules"
+    },
+    "embedding_models": {
+      "description": "Dense vector representations of text",
+      "methods": [
+        "Word2Vec",
+        "GloVe",
+        "FastText",
+        "ELMo"
+      ],
+      "explainability": "Requires post-hoc methods like analogies and nearest neighbors"
+    },
+    "transformer_based": {
+      "description": "Attention-based neural architectures",
+      "methods": [
+        "BERT",
+        "RoBERTa",
+        "GPT-2/3/4",
+        "T5",
+        "XLNet"
+      ],
+      "explainability_methods": [
+        "Attention Visualization",
+        "Probing Classifiers",
+        "Gradient-based Attribution",
+        "Layer-wise Relevance Propagation"
+      ]
+    },
+    "large_language_models": {
+      "description": "Large-scale generative models",
+      "methods": [
+        "GPT-4",
+        "Claude",
+        "LLaMA",
+        "Gemini"
+      ],
+      "explainability_approaches": {
+        "mechanistic_interpretability": {
+          "description": "Understanding internal computations",
+          "techniques": [
+            "Sparse Autoencoders",
+            "Feature Disentanglement",
+            "Circuit Analysis"
+          ]
+        },
+        "chain_of_thought": {
+          "description": "Reasoning trace generation",
+          "challenges": [
+            "Faithfulness Problem",
+            "Post-hoc Rationalization"
+          ]
+        }
+      }
+    }
+  },
+
+  "explanation_methods": {
+    "post_hoc": {
+      "feature_attribution": {
+        "local": ["LIME", "SHAP", "Anchors"],
+        "global": ["Feature Importance", "Partial Dependence Plots"]
+      },
+      "attention_based": {
+        "methods": ["Attention Weights", "Attention Rollout", "Attention Flow"],
+        "limitations": ["Attention ≠ Explanation debate"]
+      },
+      "gradient_based": {
+        "methods": ["Integrated Gradients", "Saliency Maps", "GradCAM"],
+        "applications": ["Token attribution", "Input sensitivity analysis"]
+      }
+    },
+    "intrinsic": {
+      "rule_extraction": ["Decision Trees", "Rule Lists", "Concept-based Models"],
+      "prototype_based": ["Prototype Networks", "Example-based Reasoning"],
+      "rationale_generation": ["Extractive Rationales", "Abstractive Explanations"]
+    }
+  },
+
+  "application_domains": {
+    "medicine": {
+      "subcategories": ["EHR Analysis", "Clinical Decision Support", "Medical Document Processing"],
+      "key_requirements": ["Clinical validity", "Patient safety", "Regulatory compliance"],
+      "unique_challenges": ["HIPAA/GDPR constraints", "Integration with clinical workflows"]
+    },
+    "finance": {
+      "subcategories": ["Risk Assessment", "Fraud Detection", "Algorithmic Trading"],
+      "key_requirements": ["Regulatory compliance", "Auditability", "Real-time processing"],
+      "unique_challenges": ["Adversarial gaming", "Temporal dynamics"]
+    },
+    "systematic_reviews": {
+      "subcategories": ["Study Selection", "Bias Assessment", "Data Extraction"],
+      "key_requirements": ["Reproducibility", "Efficiency", "Transparency"],
+      "unique_challenges": ["Heterogeneous corpora", "Tool integration"]
+    },
+    "crm": {
+      "subcategories": ["Sentiment Analysis", "Customer Support", "Personalization"],
+      "key_requirements": ["User satisfaction", "Real-time response", "Personalization"],
+      "unique_challenges": ["Multi-language support", "Privacy concerns"]
+    },
+    "chatbots": {
+      "subcategories": ["Virtual Assistants", "Customer Service Bots", "Conversational AI"],
+      "key_requirements": ["User trust", "Natural dialogue", "Context awareness"],
+      "unique_challenges": ["Explanation-dialogue balance", "Real-time generation"]
+    },
+    "social_science": {
+      "subcategories": ["Hate Speech Detection", "Fake News Detection", "Content Moderation"],
+      "key_requirements": ["Fairness", "Cultural sensitivity", "Platform adaptability"],
+      "unique_challenges": ["Annotation bias", "Evolving language", "Adversarial evasion"]
+    },
+    "human_resources": {
+      "subcategories": ["Resume Screening", "Talent Matching", "Performance Analysis"],
+      "key_requirements": ["Fairness", "Legal compliance", "Bias mitigation"],
+      "unique_challenges": ["Protected attributes", "Cross-cultural validity"]
+    }
+  },
+
+  "evaluation_framework": {
+    "quantitative_metrics": {
+      "fidelity": "Accuracy of explanation in capturing model behavior",
+      "faithfulness": "Whether explanation reflects true internal reasoning",
+      "comprehensiveness": "Impact of removing highlighted features",
+      "sufficiency": "Adequacy of highlighted features for prediction"
+    },
+    "human_centered_metrics": {
+      "understandability": "User comprehension of explanations",
+      "trust_calibration": "Appropriate trust/distrust based on explanations",
+      "task_performance": "Decision-making improvement with explanations"
+    },
+    "benchmarks": {
+      "M4": "Cross-modal faithfulness evaluation",
+      "ERASER": "Rationale-based explanation benchmark",
+      "HateXplain": "Hate speech with human rationales"
+    }
+  }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainability in Practice: A Survey of Explainable NLP</title>
+    <meta name="description" content="Comprehensive survey of Explainable Natural Language Processing (XNLP) across medicine, finance, CRM, HR, and more.">
+    <meta name="keywords" content="XNLP, Explainable AI, NLP, Survey, Machine Learning, Interpretability">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">XNLP Survey</a>
+            <ul class="nav-links">
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#findings">Key Findings</a></li>
+                <li><a href="#domains">Domains</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#citation">Citation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Explainability in Practice: A Survey of Explainable NLP Across Various Domains</h1>
+        <p class="subtitle">A Comprehensive Analysis of XNLP Techniques, Applications, and Evaluation Methods</p>
+        <p class="journal">Journal of Information Science | SAGE Publications | 2025</p>
+        <div class="hero-buttons">
+            <a href="../paper/XNLP_Survey.pdf" class="btn btn-primary">
+                <span>📄</span> Read Paper
+            </a>
+            <a href="https://github.com/mohammadi-hadi/xnlp-survey" class="btn btn-secondary">
+                <span>💻</span> View on GitHub
+            </a>
+        </div>
+    </header>
+
+    <!-- Abstract Section -->
+    <section id="abstract" class="section">
+        <h2>Abstract</h2>
+        <div class="abstract-content">
+            <p>
+                As Natural Language Processing (NLP) models grow increasingly complex and are deployed in high-stakes domains,
+                the demand for transparency and interpretability has intensified. This survey provides a comprehensive analysis
+                of <strong>Explainable NLP (XNLP)</strong> across diverse application domains, examining how different fields
+                conceptualize, implement, and evaluate explanations.
+            </p>
+            <p style="margin-top: 1rem;">
+                We analyze XNLP applications in <strong>medicine, finance, customer relationship management, human resources,
+                systematic reviews, social and behavioral science, and conversational AI</strong>. Our cross-domain analysis
+                reveals both common patterns—such as the universal need for building user trust—and critical differences in
+                explainability requirements shaped by regulatory constraints, stakeholder expertise, and risk tolerance.
+            </p>
+            <p style="margin-top: 1rem;">
+                The survey covers explanation techniques from traditional machine learning to large language models, including
+                emerging approaches in <strong>mechanistic interpretability</strong> and <strong>chain-of-thought reasoning</strong>.
+                We propose a framework for domain-adaptive explainability evaluation and identify key challenges and future
+                research directions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Findings Section -->
+    <section id="findings" class="section section-alt">
+        <h2>Key Findings</h2>
+        <p class="section-subtitle">
+            Our cross-domain analysis reveals critical insights for researchers and practitioners deploying XNLP systems.
+        </p>
+        <div class="findings-grid">
+            <div class="finding-card">
+                <h3>🎯 Domain-Specific Requirements</h3>
+                <p>
+                    Explainability is not one-size-fits-all. Medical applications prioritize clinical validity and patient safety,
+                    while financial applications emphasize regulatory compliance and adversarial robustness. Each domain requires
+                    tailored explanation strategies.
+                </p>
+            </div>
+            <div class="finding-card">
+                <h3>📊 Evaluation Gap</h3>
+                <p>
+                    A significant disconnect exists between technical metrics (fidelity, faithfulness) and practical utility.
+                    The M⁴ benchmark reveals that explanation methods perform inconsistently across modalities, highlighting
+                    the need for domain-specific validation protocols.
+                </p>
+            </div>
+            <div class="finding-card">
+                <h3>🤖 LLM Challenges</h3>
+                <p>
+                    Large language models present unique interpretability challenges. Chain-of-thought explanations may not
+                    faithfully reflect internal reasoning. Mechanistic interpretability through sparse autoencoders shows
+                    promise but remains incomplete.
+                </p>
+            </div>
+            <div class="finding-card">
+                <h3>📈 Measurable Impact</h3>
+                <p>
+                    Empirical evidence demonstrates explainability's tangible benefits: RETAIN achieves 0.87 AUC in heart failure
+                    prediction with full interpretability; active learning saves 88.5% of screening effort in systematic reviews;
+                    user trust correlates strongly with explanation quality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domains Section -->
+    <section id="domains" class="section">
+        <h2>Application Domains</h2>
+        <p class="section-subtitle">
+            Comparison of XNLP requirements, methods, and challenges across seven major application domains.
+        </p>
+        <div style="overflow-x: auto;">
+            <table class="domains-table">
+                <thead>
+                    <tr>
+                        <th>Domain</th>
+                        <th>Primary Need</th>
+                        <th>Key Methods</th>
+                        <th>Unique Challenges</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="domain-tag">Medicine</span></td>
+                        <td>Clinical actionability; patient safety</td>
+                        <td>RETAIN, SHAP, LIME, attention visualization</td>
+                        <td>HIPAA/GDPR constraints; clinical workflow integration</td>
+                    </tr>
+                    <tr>
+                        <td><span class="domain-tag">Finance</span></td>
+                        <td>Regulatory compliance; fraud detection</td>
+                        <td>SHAP, LIME, attention heatmaps</td>
+                        <td>Adversarial gaming; real-time constraints</td>
+                    </tr>
+                    <tr>
+                        <td><span class="domain-tag">CRM</span></td>
+                        <td>User satisfaction; personalization</td>
+                        <td>Attention visualization, rationale generation</td>
+                        <td>Multi-language requirements; privacy concerns</td>
+                    </tr>
+                    <tr>
+                        <td><span class="domain-tag">HR</span></td>
+                        <td>Fair hiring; bias reduction</td>
+                        <td>Counterfactual explanations, feature importance</td>
+                        <td>Legal liability; cross-cultural validity</td>
+                    </tr>
+                    <tr>
+                        <td><span class="domain-tag">Social Science</span></td>
+                        <td>Content moderation; safety</td>
+                        <td>SHAP, LIME, attention-based methods</td>
+                        <td>Cultural sensitivity; annotation bias</td>
+                    </tr>
+                    <tr>
+                        <td><span class="domain-tag">Systematic Reviews</span></td>
+                        <td>Reproducibility; efficiency</td>
+                        <td>Rule-based extraction, active learning</td>
+                        <td>Heterogeneous corpora; tool integration</td>
+                    </tr>
+                    <tr>
+                        <td><span class="domain-tag">Chatbots</span></td>
+                        <td>User trust; understanding</td>
+                        <td>Dialogue explanations, attention visualization</td>
+                        <td>Real-time generation; conversational flow</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section section-alt">
+        <h2>Resources</h2>
+        <p class="section-subtitle">
+            Curated collection of tools, datasets, and supplementary materials from our survey.
+        </p>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-icon">📊</div>
+                <div class="resource-content">
+                    <h4>Structured Data</h4>
+                    <p>All paper tables available as CSV files for easy reuse and analysis.</p>
+                    <a href="https://github.com/mohammadi-hadi/xnlp-survey/tree/main/data/tables" class="resource-link">View Data →</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">🗂️</div>
+                <div class="resource-content">
+                    <h4>XNLP Taxonomy</h4>
+                    <p>Hierarchical classification of techniques, applications, and evaluation methods in JSON format.</p>
+                    <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/data/taxonomy/xnlp_taxonomy.json" class="resource-link">View Taxonomy →</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">📚</div>
+                <div class="resource-content">
+                    <h4>Bibliography</h4>
+                    <p>Complete BibTeX file with 200+ references for your research.</p>
+                    <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/paper/bibtex/references.bib" class="resource-link">Download BibTeX →</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="resource-icon">🔧</div>
+                <div class="resource-content">
+                    <h4>Tools & Datasets</h4>
+                    <p>Curated links to LIME, SHAP, Captum, HateXplain, ERASER, and more.</p>
+                    <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/data/resources/tools_and_datasets.json" class="resource-link">View Resources →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section id="citation" class="section">
+        <h2>Citation</h2>
+        <p class="section-subtitle">
+            If you find this survey useful in your research, please cite our work.
+        </p>
+        <div class="citation-box">
+            <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+            <pre id="bibtex">@article{xnlp_survey_2025,
+  title={Explainability in Practice: A Survey of Explainable {NLP}
+         Across Various Domains},
+  author={[Authors]},
+  journal={Journal of Information Science},
+  year={2025},
+  publisher={SAGE Publications}
+}</pre>
+        </div>
+        <p class="text-center mt-2" style="color: var(--text-light);">
+            See <a href="https://github.com/mohammadi-hadi/xnlp-survey/blob/main/CITATION.cff">CITATION.cff</a> for machine-readable metadata.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Authors. Licensed under CC BY 4.0.</p>
+        <p>Published in the Journal of Information Science by SAGE Publications.</p>
+        <div class="footer-links">
+            <a href="https://github.com/mohammadi-hadi/xnlp-survey">GitHub</a>
+            <a href="../paper/XNLP_Survey.pdf">Paper PDF</a>
+            <a href="https://github.com/mohammadi-hadi/xnlp-survey/issues">Report Issue</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
