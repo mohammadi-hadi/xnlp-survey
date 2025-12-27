@@ -1,18 +1,27 @@
 // XNLP Survey - Charts and Visualizations
+// Unified Design System (mohammadi.cv)
 
-// Color palette
+// Color palette matching CSS variables
 const colors = {
-    primary: '#1a365d',
-    secondary: '#2c5282',
-    accent: '#3182ce',
-    medicine: '#e53e3e',
-    finance: '#38a169',
-    crm: '#805ad5',
-    hr: '#dd6b20',
-    social: '#d69e2e',
-    reviews: '#00b5d8',
-    chatbots: '#ed64a6'
+    primary: '#2563eb',
+    primaryDark: '#1d4ed8',
+    secondary: '#3b82f6',
+    accent: '#60a5fa',
+    textPrimary: '#1e293b',
+    textSecondary: '#64748b',
+    // Domain colors
+    medicine: '#dc2626',
+    finance: '#16a34a',
+    social: '#ca8a04',
+    crm: '#9333ea',
+    reviews: '#0891b2',
+    hr: '#ea580c',
+    chatbots: '#db2777'
 };
+
+// Chart.js global defaults
+Chart.defaults.font.family = "'Inter', -apple-system, BlinkMacSystemFont, sans-serif";
+Chart.defaults.color = colors.textSecondary;
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
@@ -93,9 +102,12 @@ function initDomainChart() {
                     display: false
                 },
                 tooltip: {
-                    backgroundColor: colors.primary,
+                    backgroundColor: colors.textPrimary,
+                    titleColor: '#ffffff',
+                    bodyColor: '#ffffff',
                     padding: 12,
-                    titleFont: { size: 14 },
+                    cornerRadius: 8,
+                    titleFont: { size: 14, weight: 600 },
                     bodyFont: { size: 13 }
                 }
             },
@@ -103,10 +115,12 @@ function initDomainChart() {
                 y: {
                     beginAtZero: true,
                     grid: {
-                        color: 'rgba(0,0,0,0.05)'
+                        color: 'rgba(0, 0, 0, 0.05)',
+                        drawBorder: false
                     },
                     ticks: {
-                        font: { size: 12 }
+                        font: { size: 12 },
+                        color: colors.textSecondary
                     }
                 },
                 x: {
@@ -115,6 +129,7 @@ function initDomainChart() {
                     },
                     ticks: {
                         font: { size: 11 },
+                        color: colors.textSecondary,
                         maxRotation: 45,
                         minRotation: 45
                     }
@@ -136,7 +151,8 @@ function initMethodsChart() {
             datasets: [{
                 label: 'Usage Frequency',
                 data: [85, 78, 72, 45, 38, 35, 28, 22],
-                backgroundColor: colors.accent,
+                backgroundColor: colors.primary,
+                hoverBackgroundColor: colors.primaryDark,
                 borderRadius: 6,
                 borderSkipped: false
             }]
@@ -150,18 +166,23 @@ function initMethodsChart() {
                     display: false
                 },
                 tooltip: {
-                    backgroundColor: colors.primary,
-                    padding: 12
+                    backgroundColor: colors.textPrimary,
+                    titleColor: '#ffffff',
+                    bodyColor: '#ffffff',
+                    padding: 12,
+                    cornerRadius: 8
                 }
             },
             scales: {
                 x: {
                     beginAtZero: true,
                     grid: {
-                        color: 'rgba(0,0,0,0.05)'
+                        color: 'rgba(0, 0, 0, 0.05)',
+                        drawBorder: false
                     },
                     ticks: {
-                        font: { size: 12 }
+                        font: { size: 12 },
+                        color: colors.textSecondary
                     }
                 },
                 y: {
@@ -169,7 +190,8 @@ function initMethodsChart() {
                         display: false
                     },
                     ticks: {
-                        font: { size: 12 }
+                        font: { size: 12 },
+                        color: colors.textSecondary
                     }
                 }
             }
@@ -198,45 +220,53 @@ function initRadarChart() {
                     label: 'Medicine',
                     data: [95, 60, 90, 75, 95, 85],
                     fill: true,
-                    backgroundColor: 'rgba(229, 62, 62, 0.1)',
+                    backgroundColor: 'rgba(220, 38, 38, 0.1)',
                     borderColor: colors.medicine,
+                    borderWidth: 2,
                     pointBackgroundColor: colors.medicine,
                     pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: colors.medicine
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
                 },
                 {
                     label: 'Finance',
                     data: [90, 85, 70, 80, 90, 75],
                     fill: true,
-                    backgroundColor: 'rgba(56, 161, 105, 0.1)',
+                    backgroundColor: 'rgba(22, 163, 74, 0.1)',
                     borderColor: colors.finance,
+                    borderWidth: 2,
                     pointBackgroundColor: colors.finance,
                     pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: colors.finance
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
                 },
                 {
                     label: 'HR',
                     data: [85, 40, 75, 95, 70, 80],
                     fill: true,
-                    backgroundColor: 'rgba(221, 107, 32, 0.1)',
+                    backgroundColor: 'rgba(234, 88, 12, 0.1)',
                     borderColor: colors.hr,
+                    borderWidth: 2,
                     pointBackgroundColor: colors.hr,
                     pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: colors.hr
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
                 },
                 {
                     label: 'Chatbots',
                     data: [30, 95, 85, 50, 65, 60],
                     fill: true,
-                    backgroundColor: 'rgba(237, 100, 166, 0.1)',
+                    backgroundColor: 'rgba(219, 39, 119, 0.1)',
                     borderColor: colors.chatbots,
+                    borderWidth: 2,
                     pointBackgroundColor: colors.chatbots,
                     pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: colors.chatbots
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
                 }
             ]
         },
@@ -249,12 +279,17 @@ function initRadarChart() {
                     labels: {
                         padding: 20,
                         usePointStyle: true,
-                        font: { size: 12 }
+                        pointStyle: 'circle',
+                        font: { size: 12, weight: 500 },
+                        color: colors.textPrimary
                     }
                 },
                 tooltip: {
-                    backgroundColor: colors.primary,
-                    padding: 12
+                    backgroundColor: colors.textPrimary,
+                    titleColor: '#ffffff',
+                    bodyColor: '#ffffff',
+                    padding: 12,
+                    cornerRadius: 8
                 }
             },
             scales: {
@@ -263,21 +298,41 @@ function initRadarChart() {
                     max: 100,
                     beginAtZero: true,
                     angleLines: {
-                        color: 'rgba(0, 0, 0, 0.1)'
+                        color: 'rgba(0, 0, 0, 0.08)'
                     },
                     grid: {
-                        color: 'rgba(0, 0, 0, 0.1)'
+                        color: 'rgba(0, 0, 0, 0.08)'
                     },
                     pointLabels: {
-                        font: { size: 11 }
+                        font: { size: 11, weight: 500 },
+                        color: colors.textSecondary
                     },
                     ticks: {
                         stepSize: 25,
                         font: { size: 10 },
+                        color: colors.textSecondary,
                         backdropColor: 'transparent'
                     }
                 }
             }
         }
+    });
+}
+
+// Copy BibTeX citation
+function copyBibtex() {
+    const bibtex = document.getElementById('bibtex').innerText;
+    const btn = document.querySelector('.copy-btn');
+
+    navigator.clipboard.writeText(bibtex).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+
+        setTimeout(() => {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
     });
 }
