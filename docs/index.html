@@ -8,6 +8,8 @@
     <meta name="keywords" content="XNLP, Explainable AI, NLP, Survey, Machine Learning, Interpretability">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -16,7 +18,8 @@
             <a href="#" class="nav-logo">XNLP Survey</a>
             <ul class="nav-links">
                 <li><a href="#abstract">Abstract</a></li>
-                <li><a href="#findings">Key Findings</a></li>
+                <li><a href="#statistics">Statistics</a></li>
+                <li><a href="#taxonomy">Taxonomy</a></li>
                 <li><a href="#domains">Domains</a></li>
                 <li><a href="#resources">Resources</a></li>
                 <li><a href="#citation">Citation</a></li>
@@ -64,8 +67,108 @@
         </div>
     </section>
 
+    <!-- Statistics Section -->
+    <section id="statistics" class="section section-alt">
+        <h2>Survey at a Glance</h2>
+        <p class="section-subtitle">Key statistics from our comprehensive literature review</p>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-number" data-target="200">0</div>
+                <div class="stat-label">Papers Reviewed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏥</div>
+                <div class="stat-number" data-target="7">0</div>
+                <div class="stat-label">Application Domains</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔧</div>
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">XAI Methods Analyzed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-number" data-target="12">0</div>
+                <div class="stat-label">Evaluation Metrics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Taxonomy Visualization -->
+    <section id="taxonomy" class="section">
+        <h2>XNLP Taxonomy</h2>
+        <p class="section-subtitle">Hierarchical classification of explainability techniques in NLP</p>
+
+        <div class="taxonomy-container">
+            <div class="taxonomy-tree">
+                <!-- Root -->
+                <div class="taxonomy-level taxonomy-root">
+                    <div class="taxonomy-node root-node">XNLP Methods</div>
+                </div>
+
+                <!-- Level 1: Main Categories -->
+                <div class="taxonomy-level">
+                    <div class="taxonomy-branch">
+                        <div class="taxonomy-node cat-node post-hoc">Post-hoc Methods</div>
+                        <div class="taxonomy-children">
+                            <div class="taxonomy-node leaf-node">LIME</div>
+                            <div class="taxonomy-node leaf-node">SHAP</div>
+                            <div class="taxonomy-node leaf-node">Attention Viz</div>
+                            <div class="taxonomy-node leaf-node">Gradient-based</div>
+                        </div>
+                    </div>
+                    <div class="taxonomy-branch">
+                        <div class="taxonomy-node cat-node intrinsic">Intrinsic Methods</div>
+                        <div class="taxonomy-children">
+                            <div class="taxonomy-node leaf-node">Rule Extraction</div>
+                            <div class="taxonomy-node leaf-node">Rationale Gen.</div>
+                            <div class="taxonomy-node leaf-node">Prototype-based</div>
+                            <div class="taxonomy-node leaf-node">Concept Models</div>
+                        </div>
+                    </div>
+                    <div class="taxonomy-branch">
+                        <div class="taxonomy-node cat-node llm-methods">LLM-Specific</div>
+                        <div class="taxonomy-children">
+                            <div class="taxonomy-node leaf-node">Chain-of-Thought</div>
+                            <div class="taxonomy-node leaf-node">Sparse Autoenc.</div>
+                            <div class="taxonomy-node leaf-node">Probing</div>
+                            <div class="taxonomy-node leaf-node">Mechanistic Int.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section id="charts" class="section section-alt">
+        <h2>Visual Analysis</h2>
+        <p class="section-subtitle">Interactive visualizations of our survey findings</p>
+
+        <div class="charts-grid">
+            <!-- Domain Distribution Chart -->
+            <div class="chart-container">
+                <h3>Papers by Application Domain</h3>
+                <canvas id="domainChart"></canvas>
+            </div>
+
+            <!-- Methods Popularity Chart -->
+            <div class="chart-container">
+                <h3>Most Used XAI Methods</h3>
+                <canvas id="methodsChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Domain Requirements Radar -->
+        <div class="chart-container-wide">
+            <h3>Domain Requirements Comparison</h3>
+            <canvas id="radarChart"></canvas>
+        </div>
+    </section>
+
     <!-- Key Findings Section -->
-    <section id="findings" class="section section-alt">
+    <section id="findings" class="section">
         <h2>Key Findings</h2>
         <p class="section-subtitle">
             Our cross-domain analysis reveals critical insights for researchers and practitioners deploying XNLP systems.
@@ -107,7 +210,7 @@
     </section>
 
     <!-- Domains Section -->
-    <section id="domains" class="section">
+    <section id="domains" class="section section-alt">
         <h2>Application Domains</h2>
         <p class="section-subtitle">
             Comparison of XNLP requirements, methods, and challenges across seven major application domains.
@@ -171,7 +274,7 @@
     </section>
 
     <!-- Resources Section -->
-    <section id="resources" class="section section-alt">
+    <section id="resources" class="section">
         <h2>Resources</h2>
         <p class="section-subtitle">
             Curated collection of tools, datasets, and supplementary materials from our survey.
@@ -213,7 +316,7 @@
     </section>
 
     <!-- Citation Section -->
-    <section id="citation" class="section">
+    <section id="citation" class="section section-alt">
         <h2>Citation</h2>
         <p class="section-subtitle">
             If you find this survey useful in your research, please cite our work.
@@ -247,5 +350,6 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
 </body>
 </html>
