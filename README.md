@@ -1,6 +1,7 @@
 # Explainability in Practice: A Survey of Explainable NLP
 
 [![Paper](https://img.shields.io/badge/Paper-Journal%20of%20Information%20Science-blue)](paper/XNLP_Survey.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.00837-b31b1b.svg)](https://arxiv.org/abs/2502.00837)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Data](https://img.shields.io/badge/Data-Available-green)](#structured-data)
 
