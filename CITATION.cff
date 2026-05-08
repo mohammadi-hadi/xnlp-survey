@@ -1,30 +1,60 @@
 cff-version: 1.2.0
-message: "If you use this survey or its resources, please cite it as below."
+message: "If you use this code or data, please cite both the paper and this software archive."
 title: "Explainability in Practice: A Survey of Explainable NLP Across Various Domains"
-type: article
-authors:
-  - name: "[Author Names]"
-    affiliation: "[Institution]"
-journal: "Journal of Information Science"
-year: 2025
-publisher:
-  name: "SAGE Publications"
-keywords:
-  - explainable AI
-  - natural language processing
-  - XAI
-  - XNLP
-  - interpretability
-  - machine learning
-  - survey
-abstract: >-
-  This survey provides a comprehensive analysis of Explainable Natural Language
-  Processing (XNLP) across diverse application domains including medicine, finance,
-  customer relationship management, human resources, systematic reviews, social science,
-  and conversational AI. We examine how different fields conceptualize, implement,
-  and evaluate explanations, identifying both common patterns and domain-specific
-  requirements. The survey covers explanation techniques from traditional machine
-  learning to large language models, and proposes a framework for domain-adaptive
-  explainability evaluation.
+type: software
+version: "v1.0-thesis"
+date-released: "2026-05-08"
+doi: "10.5281/zenodo.20090474"
 license: CC-BY-4.0
-repository-code: "https://github.com/[username]/xnlp-survey"
+repository-code: "https://github.com/mohammadi-hadi/xnlp-survey"
+authors:
+  - given-names: "Hadi"
+    family-names: "Mohammadi"
+    affiliation: "Utrecht University"
+  - given-names: "Robert A."
+    family-names: "Bagheri"
+    affiliation: "Utrecht University"
+  - given-names: "Anastasia"
+    family-names: "Giachanou"
+    affiliation: "Utrecht University"
+  - given-names: "Daniel L."
+    family-names: "Oberski"
+    affiliation: "Utrecht University"
+keywords:
+  - "explainable NLP"
+  - "XNLP"
+  - "interpretability"
+  - "natural language processing"
+  - "survey"
+  - "large language models"
+  - "transparency"
+abstract: >-
+  Natural Language Processing (NLP) has become a cornerstone in many
+  critical sectors, including healthcare, finance, and customer
+  relationship management. The black-box nature of advanced NLP models has
+  created an urgent need for transparency and explainability. This survey
+  provides a comprehensive review of explainable NLP (XNLP) with a focus
+  on practical deployment across domain-specific contexts, examining how
+  explanations can be designed to meet the unique demands of healthcare,
+  finance, customer relationship management, systematic reviews,
+  conversational AI, and beyond. The survey concludes by identifying gaps
+  and future research directions.
+preferred-citation:
+  type: article
+  title: "Explainability in Practice: A Survey of Explainable NLP Across Various Domains"
+  year: 2025
+  journal: "arXiv preprint"
+  url: "https://arxiv.org/abs/2502.00837"
+  authors:
+    - given-names: "Hadi"
+      family-names: "Mohammadi"
+      affiliation: "Utrecht University"
+    - given-names: "Robert A."
+      family-names: "Bagheri"
+      affiliation: "Utrecht University"
+    - given-names: "Anastasia"
+      family-names: "Giachanou"
+      affiliation: "Utrecht University"
+    - given-names: "Daniel L."
+      family-names: "Oberski"
+      affiliation: "Utrecht University"

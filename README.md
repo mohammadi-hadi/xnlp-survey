@@ -1,10 +1,60 @@
-# Explainability in Practice: A Survey of Explainable NLP
+<div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-Journal%20of%20Information%20Science-blue)](paper/XNLP_Survey.pdf)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Data](https://img.shields.io/badge/Data-Available-green)](#structured-data)
+# Survey of Explainable NLP Applications
 
-This repository contains supplementary materials for the survey paper **"Explainability in Practice: A Survey of Explainable NLP Across Various Domains"** published in the *Journal of Information Science*.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20090474.svg)](https://doi.org/10.5281/zenodo.20090474)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.00837-b31b1b.svg)](https://arxiv.org/abs/2502.00837)
+[![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+
+*A cross-domain survey of explainable NLP — from traditional ML to large language models.*
+
+</div>
+
+## Paper
+
+|                  |                                                                          |
+| ---------------- | ------------------------------------------------------------------------ |
+| **Title**        | Explainability in Practice: A Survey of Explainable NLP Across Various Domains |
+| **Authors**      | Hadi Mohammadi, Robert A. Bagheri, Anastasia Giachanou, Daniel L. Oberski |
+| **Affiliation**  | Utrecht University, The Netherlands |
+| **Venue**        | arXiv preprint |
+| **arXiv**        | [2502.00837](https://arxiv.org/abs/2502.00837) |
+| **Code archive** | [10.5281/zenodo.20090474](https://doi.org/10.5281/zenodo.20090474) (this repository, snapshot v1.0-thesis) |
+
+> This repository accompanies **Chapter 2** of the PhD thesis
+> *Let Me Explain! Explainable NLP for Understanding Large Language Models* (Hadi Mohammadi, Utrecht University, 2026).
+
+## Abstract
+
+Natural Language Processing (NLP) has become a cornerstone in many critical sectors, including healthcare, finance, and customer relationship management. The black-box nature of advanced NLP models has created an urgent need for transparency and explainability. This survey provides a comprehensive review of explainable NLP (XNLP) with a focus on practical deployment across domain-specific contexts, examining how explanations can be designed to meet the unique demands of healthcare, finance, customer relationship management, systematic reviews, conversational AI, and beyond. The survey concludes by identifying gaps and future research directions.
+
+## Citation
+
+If you use this code or data, please cite **both** the paper and this code archive:
+
+```bibtex
+@article{mohammadi2025xnlp,
+  title         = {Explainability in Practice: A Survey of Explainable NLP Across Various Domains},
+  author        = {Mohammadi, Hadi and Bagheri, Robert A. and Giachanou, Anastasia and Oberski, Daniel L.},
+  year          = {2025},
+  journal       = {arXiv preprint},
+  eprint        = {2502.00837},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2502.00837}
+}
+
+@software{mohammadi_xnlp_survey_2026,
+  author    = {Mohammadi, Hadi and Bagheri, Robert A. and Giachanou, Anastasia and Oberski, Daniel L.},
+  title     = {Survey of Explainable NLP Applications},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v1.0-thesis},
+  doi       = {10.5281/zenodo.20090474},
+  url       = {https://doi.org/10.5281/zenodo.20090474}
+}
+```
+
+---
 
 ## Overview
 
@@ -20,17 +70,21 @@ As Natural Language Processing (NLP) models grow more complex and are deployed i
 ## Repository Structure
 
 ```
-xnlp-survey-package/
+xnlp-survey/
 ├── README.md                           # This file
 ├── LICENSE                             # CC BY 4.0 License
 ├── CITATION.cff                        # Citation metadata
 │
 ├── paper/
-│   ├── XNLP_Survey.pdf                 # Full survey paper
-│   └── bibtex/
-│       └── references.bib              # Complete bibliography (200+ references)
+│   └── XNLP_Survey.pdf                 # Full survey paper
+│
+├── code/
+│   ├── create_figures.py               # Generates Fig. 1 (taxonomy) and Fig. 2 (decision tree)
+│   └── requirements.txt                # Python dependencies (matplotlib, numpy)
 │
 ├── data/
+│   ├── ethics_reference.md             # Methodology and ethics statement
+│   │
 │   ├── tables/                         # Structured data from paper tables
 │   │   ├── cross_domain_comparison.csv
 │   │   ├── domain_evaluation_requirements.csv
@@ -105,27 +159,11 @@ Empirical studies demonstrate measurable benefits of explainability:
 - Active learning with explanations achieves 88.5% work saved in systematic reviews
 - User trust in chatbots correlates strongly with perceived explanation quality
 
-## Citation
-
-If you use this survey or its resources in your research, please cite:
-
-```bibtex
-@article{xnlp_survey_2025,
-  title={Explainability in Practice: A Survey of Explainable {NLP} Across Various Domains},
-  author={[Authors]},
-  journal={Journal of Information Science},
-  year={2025},
-  publisher={SAGE Publications}
-}
-```
-
-See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
-
 ## License
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-- **Paper**: © Authors, published by SAGE Publications
+- **Paper**: © Authors (arXiv preprint)
 - **Supplementary Materials**: CC BY 4.0
 
 ## Contributing
@@ -138,10 +176,5 @@ We welcome contributions to improve and extend these resources:
 
 ## Contact
 
-For questions about the survey or this repository, please:
-- Open a [GitHub Issue](../../issues)
-- Contact the corresponding author (see paper for details)
-
----
-
-**Last Updated**: 2025
+- **Hadi Mohammadi** — Utrecht University
+- Website: [mohammadi.cv](https://mohammadi.cv)
