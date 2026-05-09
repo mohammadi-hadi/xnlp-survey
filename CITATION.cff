@@ -4,6 +4,10 @@ title: "Explainability in Practice: A Survey of Explainable NLP Across Various D
 type: software
 version: "v1.0-thesis"
 date-released: "2026-05-09"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20091833
+    description: Zenodo archive of the v1.0-thesis snapshot
 license: CC-BY-4.0
 repository-code: "https://github.com/mohammadi-hadi/xnlp-survey"
 authors:
