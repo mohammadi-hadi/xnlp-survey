@@ -1,0 +1,25 @@
+{
+  "title": "Explainability in Practice: A Survey of Explainable NLP Across Various Domains",
+  "description": "Code, figures, and supplementary materials for the survey of explainable NLP across healthcare, finance, customer-relationship management, systematic reviews, and conversational AI. Archived snapshot for the v1.0-thesis release accompanying the doctoral thesis Let Me Explain! Explainable NLP for Understanding Large Language Models (Utrecht University, 2026).",
+  "creators": [
+    {"name": "Mohammadi, Hadi", "orcid": "0000-0003-0860-9200", "affiliation": "Utrecht University"},
+    {"name": "Bagheri, Robert A.", "affiliation": "Utrecht University"},
+    {"name": "Giachanou, Anastasia", "affiliation": "Utrecht University"},
+    {"name": "Oberski, Daniel L.", "affiliation": "Utrecht University"}
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "software",
+  "version": "v1.0-thesis",
+  "keywords": [
+    "explainable NLP",
+    "XNLP",
+    "interpretability",
+    "natural language processing",
+    "survey",
+    "large language models",
+    "transparency"
+  ],
+  "related_identifiers": [
+    {"identifier": "https://arxiv.org/abs/2502.00837", "relation": "isSupplementTo", "scheme": "url"}
+  ]
+}
