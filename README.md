@@ -2,7 +2,7 @@
 
 # Survey of Explainable NLP Applications
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20090474.svg)](https://doi.org/10.5281/zenodo.20090474)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20091832.svg)](https://doi.org/10.5281/zenodo.20091832)
 [![arXiv](https://img.shields.io/badge/arXiv-2502.00837-b31b1b.svg)](https://arxiv.org/abs/2502.00837)
 [![License: CC-BY-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
@@ -19,7 +19,7 @@
 | **Affiliation**  | Utrecht University, The Netherlands |
 | **Venue**        | arXiv preprint |
 | **arXiv**        | [2502.00837](https://arxiv.org/abs/2502.00837) |
-| **Code archive** | [10.5281/zenodo.20090474](https://doi.org/10.5281/zenodo.20090474) (this repository, snapshot v1.0-thesis) |
+| **Code archive** | [10.5281/zenodo.20091832](https://doi.org/10.5281/zenodo.20091832) (this repository, snapshot v1.0-thesis) |
 
 > This repository accompanies **Chapter 2** of the PhD thesis
 > *Let Me Explain! Explainable NLP for Understanding Large Language Models* (Hadi Mohammadi, Utrecht University, 2026).
@@ -49,8 +49,8 @@ If you use this code or data, please cite **both** the paper and this code archi
   year      = {2026},
   publisher = {Zenodo},
   version   = {v1.0-thesis},
-  doi       = {10.5281/zenodo.20090474},
-  url       = {https://doi.org/10.5281/zenodo.20090474}
+  doi       = {10.5281/zenodo.20091832},
+  url       = {https://doi.org/10.5281/zenodo.20091832}
 }
 ```
 
