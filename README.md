@@ -75,8 +75,6 @@ xnlp-survey/
 ├── LICENSE                             # CC BY 4.0 License
 ├── CITATION.cff                        # Citation metadata
 │
-├── paper/
-│   └── XNLP_Survey.pdf                 # Full survey paper
 │
 ├── code/
 │   ├── create_figures.py               # Generates Fig. 1 (taxonomy) and Fig. 2 (decision tree)
