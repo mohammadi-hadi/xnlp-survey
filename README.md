@@ -17,7 +17,7 @@
 | **Title**        | Explainability in Practice: A Survey of Explainable NLP Across Various Domains |
 | **Authors**      | Hadi Mohammadi, Robert A. Bagheri, Anastasia Giachanou, Daniel L. Oberski |
 | **Affiliation**  | Utrecht University, The Netherlands |
-| **Venue**        | arXiv preprint |
+| **Venue**        | Journal of Information Science |
 | **arXiv**        | [2502.00837](https://arxiv.org/abs/2502.00837) |
 | **Code archive** | [10.5281/zenodo.20091832](https://doi.org/10.5281/zenodo.20091832) (this repository, snapshot v1.0-thesis) |
 
@@ -37,7 +37,7 @@ If you use this code or data, please cite **both** the paper and this code archi
   title         = {Explainability in Practice: A Survey of Explainable NLP Across Various Domains},
   author        = {Mohammadi, Hadi and Bagheri, Robert A. and Giachanou, Anastasia and Oberski, Daniel L.},
   year          = {2025},
-  journal       = {arXiv preprint},
+  journal       = {Journal of Information Science},
   eprint        = {2502.00837},
   archivePrefix = {arXiv},
   url           = {https://arxiv.org/abs/2502.00837}
@@ -60,12 +60,43 @@ If you use this code or data, please cite **both** the paper and this code archi
 
 As Natural Language Processing (NLP) models grow more complex and are deployed in high-stakes domains, the need for **Explainable NLP (XNLP)** has become critical. This survey provides a comprehensive analysis of explainability techniques across diverse application domains, examining how different fields conceptualize, implement, and evaluate explanations.
 
-### Key Contributions
+## Key Contributions
 
 - **Cross-Domain Analysis**: First systematic comparison of XNLP requirements across seven major application domains
 - **Technique Taxonomy**: Hierarchical classification of explanation methods from traditional ML to LLMs
 - **Evaluation Framework**: Domain-specific evaluation requirements and standardized metrics
 - **Practical Insights**: Empirical evidence on explanation effectiveness in real-world deployments
+
+## Key Findings
+
+### 1. Domain-Specific Requirements
+Explainability is not one-size-fits-all. Medical applications prioritize clinical validity and patient safety, while financial applications emphasize regulatory compliance and adversarial robustness.
+
+### 2. Evaluation Gap
+A disconnect exists between technical metrics (fidelity, faithfulness) and practical utility. Domain-specific validation protocols are essential.
+
+### 3. LLM Challenges
+Large language models present unique interpretability challenges:
+- **Mechanistic interpretability** is advancing but remains incomplete
+- **Chain-of-thought** explanations may not faithfully reflect internal reasoning
+- **Explainability-by-design** approaches show promise for future development
+
+### 4. Quantitative Evidence
+Empirical studies demonstrate measurable benefits of explainability:
+- RETAIN achieves AUC 0.8717 in heart failure prediction with full interpretability
+- Active learning with explanations achieves 88.5% work saved in systematic reviews
+- User trust in chatbots correlates strongly with perceived explanation quality
+
+## Quick Start
+
+```bash
+git clone https://github.com/mohammadi-hadi/xnlp-survey.git
+cd xnlp-survey
+pip install -r code/requirements.txt
+
+# Regenerate the paper figures (taxonomy + method-selection decision tree)
+python code/create_figures.py
+```
 
 ## Repository Structure
 
@@ -74,37 +105,27 @@ xnlp-survey/
 ├── README.md                           # This file
 ├── LICENSE                             # CC BY 4.0 License
 ├── CITATION.cff                        # Citation metadata
-│
-│
 ├── code/
 │   ├── create_figures.py               # Generates Fig. 1 (taxonomy) and Fig. 2 (decision tree)
 │   └── requirements.txt                # Python dependencies (matplotlib, numpy)
-│
 ├── data/
 │   ├── ethics_reference.md             # Methodology and ethics statement
-│   │
 │   ├── tables/                         # Structured data from paper tables
 │   │   ├── cross_domain_comparison.csv
 │   │   ├── domain_evaluation_requirements.csv
 │   │   ├── xnlp_applications_overview.csv
 │   │   └── evaluation_metrics.csv
-│   │
 │   ├── taxonomy/
 │   │   └── xnlp_taxonomy.json          # Hierarchical XNLP taxonomy
-│   │
 │   └── resources/
 │       └── tools_and_datasets.json     # Links to tools and datasets
-│
-├── docs/                               # Project website
-│   ├── index.html
-│   ├── css/
-│   └── js/
-│
-└── .github/
-    └── ISSUE_TEMPLATE.md
+└── docs/                               # Project website
+    ├── index.html
+    ├── css/
+    └── js/
 ```
 
-## Structured Data
+## Data
 
 ### Cross-Domain Comparison
 
@@ -137,40 +158,21 @@ See [`data/resources/tools_and_datasets.json`](data/resources/tools_and_datasets
 - Benchmarks (HateXplain, ERASER, e-SNLI)
 - Pre-trained model hubs
 
-## Key Findings
+## Related Work
 
-### 1. Domain-Specific Requirements
-Explainability is not one-size-fits-all. Medical applications prioritize clinical validity and patient safety, while financial applications emphasize regulatory compliance and adversarial robustness.
+Companion repositories applying explainable NLP from the same thesis:
 
-### 2. Evaluation Gap
-A disconnect exists between technical metrics (fidelity, faithfulness) and practical utility. Domain-specific validation protocols are essential.
-
-### 3. LLM Challenges
-Large language models present unique interpretability challenges:
-- **Mechanistic interpretability** is advancing but remains incomplete
-- **Chain-of-thought** explanations may not faithfully reflect internal reasoning
-- **Explainability-by-design** approaches show promise for future development
-
-### 4. Quantitative Evidence
-Empirical studies demonstrate measurable benefits of explainability:
-- RETAIN achieves AUC 0.8717 in heart failure prediction with full interpretability
-- Active learning with explanations achieves 88.5% work saved in systematic reviews
-- User trust in chatbots correlates strongly with perceived explanation quality
+- [EvalMORAAL](https://github.com/mohammadi-hadi/EvalMORAAL) — interpretable chain-of-thought and LLM-as-judge evaluation of moral alignment
+- [cultural-moral-judgments-llms](https://github.com/mohammadi-hadi/cultural-moral-judgments-llms) — probing cultural variation in LLM moral judgments with WVS/PEW surveys
+- [Token-Replacement](https://github.com/mohammadi-hadi/Token-Replacement) — SHAP-guided token replacement on LLM-generated text
+- [Explainable_Annotations_Reliability](https://github.com/mohammadi-hadi/Explainable_Annotations_Reliability) — SHAP explanations vs. demographic persona-prompting for LLM annotation
 
 ## License
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-- **Paper**: © Authors (arXiv preprint)
+- **Paper**: © Authors
 - **Supplementary Materials**: CC BY 4.0
-
-## Contributing
-
-We welcome contributions to improve and extend these resources:
-
-1. **Corrections**: Open an issue for any errors in the data
-2. **Updates**: Submit PRs to add new papers, tools, or resources
-3. **Extensions**: Suggest additional domains or techniques to cover
 
 ## Contact
 
