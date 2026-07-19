@@ -12,9 +12,10 @@ license: CC-BY-4.0
 repository-code: "https://github.com/mohammadi-hadi/xnlp-survey"
 authors:
   - given-names: "Hadi"
+    orcid: "https://orcid.org/0000-0003-0860-9200"
     family-names: "Mohammadi"
     affiliation: "Utrecht University"
-  - given-names: "Robert A."
+  - given-names: "Ayoub"
     family-names: "Bagheri"
     affiliation: "Utrecht University"
   - given-names: "Anastasia"
@@ -50,9 +51,10 @@ preferred-citation:
   url: "https://arxiv.org/abs/2502.00837"
   authors:
     - given-names: "Hadi"
+      orcid: "https://orcid.org/0000-0003-0860-9200"
       family-names: "Mohammadi"
       affiliation: "Utrecht University"
-    - given-names: "Robert A."
+    - given-names: "Ayoub"
       family-names: "Bagheri"
       affiliation: "Utrecht University"
     - given-names: "Anastasia"
